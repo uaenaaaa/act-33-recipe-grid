@@ -1,0 +1,27 @@
+<div class="container">
+
+<div class="recipe-list">
+	<div
+		class="recipe-list__item"
+		*ngFor="let recipe of recipes">
+		<img
+			class="recipe-list__item-image"
+			[src]="recipe.imagePath"
+			[alt]="recipe.name" />
+		<div class="recipe-list__item-content">
+			<h2 class="recipe-list__item-title">{{ recipe.name }}</h2>
+			<p class="recipe-list__item-description">
+				{{ recipe.description }}
+			</p>
+			<ul class="recipe-list__item-ingredients">
+				<li
+					class="recipe-list__item-ingredient"
+					*ngFor="let ingredient of recipe.ingredients">
+					{{ ingredient }}
+				</li>
+			</ul>
+			<p class="recipe-list__item-rating">Rating: {{ recipe.rating }}</p>
+		</div>
+	</div>
+</div>
+</div>
